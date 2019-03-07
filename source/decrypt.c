@@ -471,7 +471,7 @@ void decrypt_pup(const char* name, int input, off_t baseOffset, int fd)
   int output = -1;
 
   char path[260];
-  sprintf(path, "/update/%s.dec", name); //"/mnt/usb0/%s.dec" or "/update/%s.dec"
+  sprintf(path, "/mnt/usb0/%s.dec", name);
 
   printfsocket("Creating %s...\n", path);
 
@@ -529,7 +529,7 @@ CHECK_SIZE(bls_header, 32);
 
 void decrypt_pups()
 {
-  const char* path = "/update/PS4UPDATE.PUP"; //"/mnt/usb0/PS4UPDATE.PUP" or "/update/PS4UPDATE.PUP";
+  const char* path = "/mnt/usb0/PS4UPDATE.PUP"; 
 
   int myread;
   int fd = -1;
